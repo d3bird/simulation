@@ -1,6 +1,6 @@
 #include <iostream>
 #include "person.h"
-
+#include "personBase.h"
 
 
 int main() {
