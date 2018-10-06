@@ -16,7 +16,7 @@ public:
 	personbase();
 	
 	void createperson();
-	void remoceperson(int id);
+	void remoceperson(int i);
 	
 	person* getNextPerson();
 

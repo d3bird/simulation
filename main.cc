@@ -4,9 +4,13 @@
 
 
 int main() {
-	person t(1);
 
+	personbase pb;
+
+	person t(1);
+	person f(2);
 	t.print();
+	f.print();
 
 	std::cin.get();
 	return 0;
