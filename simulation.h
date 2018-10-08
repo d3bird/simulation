@@ -1,6 +1,6 @@
 #pragma once
 #include "personBase.h"
-
+#include "government.h"
 
 class simulation
 {
@@ -13,8 +13,6 @@ public:
 
 private:
 	personbase pb;
-
-	 
 
 };
 
