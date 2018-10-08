@@ -28,6 +28,7 @@ void personbase::remoceperson(int i) {
 	for (int x = 0; x < que.size(); x++) {
 		temp = que.front();
 		if (temp->getID() == i) {
+			delete temp;
 			que.pop();
 			freeIDs.push(i);
 			return;
