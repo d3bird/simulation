@@ -1,17 +1,19 @@
 #include "personBase.h"
-
+#include <iostream>
 
 personbase::personbase() {
 	id = 0;
 }
 
 void personbase::createperson() {
+	person* temp;
 	if (freeIDs.size() == 0) {
-
+		 temp = new person(id);
+		id++;
 	}
 	else {
-		person* temp = new person(id);
-		id++;
+		 temp = new person(freeIDs.top());
+		freeIDs.pop();
 	}
 //	node* insert = new node;
 	//insert->data = temp;
@@ -23,20 +25,20 @@ void personbase::createperson() {
 void personbase::remoceperson(int i) {
 
 	person* temp;
-	for (int i = 0; i < que.size(); i++) {
-		temp = que.top();
+	for (int x = 0; x < que.size(); x++) {
+		temp = que.front();
 		if (temp->getID() == i) {
 			que.pop();
 			freeIDs.push(i);
 			return;
 		}
 	}
-	cout << "id: " << i << " was not found" << endl;
+	std::cout << "id: " << i << " was not found" << std::endl;
 }
 
 person* personbase::getNextPerson() {
-	person* output = que.top();
-	que.pop;
+	person* output = que.front();
+	que.pop();
 	que.push(output);
 	return output;
 }
