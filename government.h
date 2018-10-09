@@ -2,32 +2,20 @@
 #include "person.h"
 #include <string>
 
-class law
-{
-public:
-	law();
-	
-
-private:
-	std::string affects;
-};
-
-law::law(){
-
-}
 
 
-class government
-{
+
+class government{
 public:
 	government();
 	~government();
 
+	/*
 	void addPopulation(int i);
-	void createLaw();
+	void createLaw();	
 	void removeLaw(int i);
 	law* getLaw();
-
+	*/
 
 	void changeLowIndustrial(int i);
 	void changeMediumIndustrial(int i);
@@ -54,7 +42,7 @@ public:
 	int getHighResidential() { return HighResidential; }
 
 private:
-	int lawID;
+	//int lawID;
 
 
 	int population;
