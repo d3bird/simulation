@@ -1,6 +1,6 @@
 #pragma once
 #include "personBase.h"
-#include "government.h"
+
 
 class simulation
 {
@@ -10,6 +10,7 @@ public:
 
 	void update();
 	
+
 	void changeSpeed(int i);
 	int getSpeed() { return speed; }
 	
@@ -18,10 +19,19 @@ public:
 	bool isRunning() { return running; }
 
 private:
+
+	//int map[][];
+
 	bool running;
 	int speed;
 
-	government gov();
+	int metal;
+	int food;
+	int wood;
+	int stone;
+
+
+
 
 };
 
